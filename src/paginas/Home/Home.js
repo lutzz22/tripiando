@@ -11,13 +11,13 @@ const Home = () => {
       <div className='pagina'>
         <nav className="navbar navbar-dark bg-primary navbar-expand-lg barra">
           <div className="container-fluid">
-            <a className="navbar-brand">TRIPIANDO.COM</a>
+            <a className="navbar-brand logo">TRIPIANDO.COM</a>
             <ul className='opciones d-flex'>
               <li className="nav-item">
                 <Link className="nav-link link-light" to='/landing'>Inicio</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link link-light" to="/login">Iniciar Sesion</Link>
+                <a className="link-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar Sesion</a>
               </li>
             </ul>
           </div>
@@ -56,6 +56,23 @@ const Home = () => {
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="visually-hidden">Next</span>
           </button>
+        </div>
+        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h6 className="modal-title" id="exampleModalLabel">Modal title</h6>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+                ...
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
