@@ -1,25 +1,7 @@
 .pagina {
     background-color: black;
 }
-.logo {
-    margin-left: 20px;
-}
 
-.barra {
-    opacity: 0.9;
-}
-
-li {
-    list-style-type: none;
-    text-decoration: none;
-    margin-right: 30px;
-}
-
-ul {
-    margin: 0;
-    margin-right: 10px;
-    
-}
 
 img {
     opacity: 0.5;

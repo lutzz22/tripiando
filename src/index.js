@@ -9,9 +9,11 @@ import UserProvider from './store/AppContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <UserProvider>
-    <App />
-  // </UserProvider>
+  <React.StrictMode>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -9,6 +9,7 @@ import Explorar from './paginas/Explorar/Explorar';
 import Fav from './paginas/Favoritos/Fav';
 import Perfil from './paginas/Perfil/Perfil';
 import Error from './paginas/Error/index';
+import Login from './paginas/Login';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/explorar' element={<Explorar />}></Route>
           <Route path='/favoritos' element={<Fav />}></Route>
           <Route path='/perfil' element={<Perfil />}></Route>
+          <Route path='/login' element={<Login />}></Route>
           <Route path='*' element={<Error />}></Route>
         </Routes>
       </Router>

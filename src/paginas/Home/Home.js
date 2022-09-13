@@ -1,5 +1,5 @@
 import {React, useContext}  from 'react';
-import {Link,} from 'react-router-dom';
+import Navbar2 from '../../componentes/Navbar2/Navbar2';
 import '../Home/style.css'
 import img1 from '../../imagenes/img1.jpg'
 import img2 from '../../imagenes/img2.jpg'
@@ -9,19 +9,7 @@ const Home = () => {
   return (
     <>
       <div className='pagina'>
-        <nav className="navbar navbar-dark bg-primary navbar-expand-lg barra">
-          <div className="container-fluid">
-            <a className="navbar-brand logo">TRIPIANDO.COM</a>
-            <ul className='opciones d-flex'>
-              <li className="nav-item">
-                <Link className="nav-link link-light" to='/landing'>Inicio</Link>
-              </li>
-              <li className="nav-item">
-                <a className="link-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar Sesion</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar2></Navbar2>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -30,7 +18,7 @@ const Home = () => {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={img1} className=" w-100" alt="..."/>
+              <img src={img1} className="d-block w-100" alt="..."/>
               <div className="carousel-caption d-none d-md-block">
                 <h5>"No dejes para mañana el viaje que podes hacer hoy"</h5>
               </div>
@@ -57,7 +45,7 @@ const Home = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {/* <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
               <div className="modal-header">
@@ -73,7 +61,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
     
