@@ -1,12 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import './App.css';
-import Home from './paginas/Home';
-import Landing from './paginas/Landing';
-import Inicio from './paginas/Inicio';
-import Explorar from './paginas/Explorar';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
+import Home from './paginas/Home/Home';
+import Landing from './paginas/Landing/Landing';
+import Inicio from './paginas/Inicio/Inicio';
+import Explorar from './paginas/Explorar/Explorar';
 import Fav from './paginas/Favoritos/Fav';
-import Perfil from './paginas/Perfil';
-import Error from './paginas/Error';
+import Perfil from './paginas/Perfil/Perfil';
+import Error from './paginas/Error/index';
 
 function App() {
   return (

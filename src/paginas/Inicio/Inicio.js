@@ -1,5 +1,5 @@
 import {React, useContext}  from 'react'
-import './style.css'
+import '../Inicio/style.css'
 
 const Inicio = () => {
   return (

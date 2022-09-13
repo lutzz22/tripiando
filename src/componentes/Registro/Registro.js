@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.css'
+import '../Registro/style.css'
 
 const Registro = () => {
   return (

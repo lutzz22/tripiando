@@ -1,5 +1,5 @@
 import {React, useContext}  from 'react'
-import './style.css'
+import '../Landing/style.css'
 
 const Landing = () => {
   return (

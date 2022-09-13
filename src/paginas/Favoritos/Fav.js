@@ -1,5 +1,5 @@
 import {React, useContext}  from 'react'
-import './style.css'
+import '../Favoritos/style.css'
 
 const Fav = () => {
   return (

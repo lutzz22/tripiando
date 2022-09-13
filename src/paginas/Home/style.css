@@ -1,0 +1,35 @@
+.pagina {
+    background-color: black;
+}
+
+.barra {
+    opacity: 0.9;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+ul {
+    margin: 0;
+    margin-right: 10px;
+    
+}
+
+img {
+    opacity: 0.5;
+    height: 94vh;
+}
+
+h5 {
+    font-variant: small-caps;
+    margin: 0 auto;
+    width: 50vw;
+    font-size: 60px;
+    margin-bottom: 25%;
+}
+
+
+
