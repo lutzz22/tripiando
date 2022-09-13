@@ -8,8 +8,8 @@ import img3 from '../../imagenes/img3.jpg'
 const Home = () => {
   return (
     <>
+     <Navbar2></Navbar2>
       <div className='pagina'>
-        <Navbar2></Navbar2>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -26,7 +26,7 @@ const Home = () => {
             <div className="carousel-item active">
               <img src={img2} className="d-block w-100" alt="..."/>
               <div className="carousel-caption d-none d-md-block">
-                <h5>"Si no escalas la montaña, jamas podras disfrutar del paisaje"</h5>
+                <h5 >"Si no escalas la montaña, jamas podras disfrutar del paisaje"</h5>
               </div>
             </div>
             <div className="carousel-item active">
@@ -45,23 +45,6 @@ const Home = () => {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-        {/* <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h6 className="modal-title" id="exampleModalLabel">Modal title</h6>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div className="modal-body">
-                ...
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
     

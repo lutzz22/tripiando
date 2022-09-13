@@ -5,7 +5,7 @@ import '../Navbar2/style.css'
 const Navbar2 = () => {
   return (
     <div>
-        <nav className="navbar navbar-dark bg-primary navbar-expand-lg barra">
+        <nav className="navbar navbar-dark navbar-expand-lg barra">
           <div className="container-fluid">
             <Link className="navbar-brand logo" to='/home'>TRIPIANDO.COM</Link>
             <ul className='opciones d-flex'>

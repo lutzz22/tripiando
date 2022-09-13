@@ -1,14 +1,18 @@
 .pagina {
-    background-color: black;
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    background: black;
 }
 
 
 img {
-    opacity: 0.5;
+    /* opacity: 0.5; */
     height: 94vh;
 }
 
 h5 {
+    background-color: rgba(30, 0, 255, 0.2);
     font-variant: small-caps;
     margin: 0 auto;
     width: 50vw;

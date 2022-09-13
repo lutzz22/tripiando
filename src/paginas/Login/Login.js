@@ -7,7 +7,7 @@ const Login = () => {
     <>
     <Navbar2/>
       <div id='formularios' className='row'>
-        <h2>Inicia Sesion o Registrate</h2>
+        <h2>Inicia Sesion o Registrate aca</h2>
         <div id='inicioSesion' className='col-3'>
           <div className="mb-3">
             <label htmlFor="emailInicio" className="form-label">Correo Electronico</label>
