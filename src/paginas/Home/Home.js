@@ -8,7 +8,7 @@ import img3 from '../../imagenes/img3.jpg'
 const Home = () => {
   return (
     <>
-     <Navbar2></Navbar2>
+     <Navbar2/>
       <div className='pagina'>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
           <div className="carousel-indicators">
