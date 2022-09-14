@@ -13,7 +13,7 @@ const Navbar = () => {
 
                 <h1><Link to='/home' className='titulo'>Tripiando</Link></h1>
 
-                <nav className='d-flex list-unstyled titulos'>
+                <nav className='d-flex list-unstyled '>
                     <li className="breadcrumb-item"><Link to="/login" className='titulos'>Iniciar sesión</Link></li>
                     <li className=""><Link to="/login" className='titulos'>Registrarse</Link></li>
                 </nav>
