@@ -1,0 +1,26 @@
+.error{
+    width: 100%;
+    height: 100vh;
+    background-color:  #f2f2f2;
+}
+
+.image{
+    width: 60%;
+    height: 60vh;
+    /* border: 1px solid red; */
+}
+
+.texto1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 90%;
+    color:  #1e409f;
+    /* border: 1px solid red; */
+
+}
+
+.texto2{
+    color:  #1e409f;
+    /* border: 1px solid red; */
+}
