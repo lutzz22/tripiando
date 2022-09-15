@@ -8,7 +8,7 @@ import img3 from '../../imagenes/img3.jpg'
 const Home = () => {
   return (
     <>
-     <Navbar2/>
+    <Navbar2/>
       <div className='pagina'>
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
           <div className="carousel-indicators">
@@ -17,7 +17,7 @@ const Home = () => {
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
           <div className="carousel-inner">
-            <div className="carousel-item active">
+          <div className="carousel-item active">
               <img src={img1} className="d-block w-100" alt="..."/>
               <div className="carousel-caption d-none d-md-block">
                 <h5>"No dejes para mañana el viaje que podes hacer hoy"</h5>
