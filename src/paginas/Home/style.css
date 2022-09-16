@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .pagina {
     width: 100%;
     height: 100vh;
@@ -14,10 +15,35 @@
 
 /* h5 {
     background-color: rgba(30, 0, 255, 0.2);
+=======
+
+.carousel-inner{
+    height: 92vh;
+}
+
+.imagen {
+    height: 93vh;
+    width: 100%;
+}
+
+
+h5 {
+>>>>>>> lucia
     font-variant: small-caps;
     margin: 0 auto;
     width: 50vw;
     font-size: 60px;
+<<<<<<< HEAD
     margin-bottom: 23%;
 } */
+=======
+    margin-bottom: 27%;
+    padding-bottom: 80px;
+}
+
+.margin{
+    margin-bottom: 100px;
+}
+
+>>>>>>> lucia
 
