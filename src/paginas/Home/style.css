@@ -1,24 +1,25 @@
-.pagina {
-    position: absolute;
-    height: 90vh;
-    width: 100vw;
-    background: black;
+
+.carousel-inner{
+    height: 92vh;
 }
 
-
-img {
-    /* opacity: 0.5; */
-    height: 94vh;
+.imagen {
+    height: 93vh;
+    width: 100%;
 }
+
 
 h5 {
-    background-color: rgba(30, 0, 255, 0.2);
     font-variant: small-caps;
     margin: 0 auto;
     width: 50vw;
     font-size: 60px;
-    margin-bottom: 23%;
+    margin-bottom: 27%;
+    padding-bottom: 80px;
 }
 
+.margin{
+    margin-bottom: 100px;
+}
 
 
