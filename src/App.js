@@ -10,6 +10,7 @@ import Fav from './paginas/Favoritos/Fav';
 import Perfil from './paginas/Perfil/Perfil';
 import Error from './paginas/Error/index';
 import Login from './paginas/Login';
+import Footer from './componentes/Footer/Footer';
 
 import ModalPost from './componentes/ModalPost/ModalPost';
 
@@ -19,7 +20,7 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/home' element={<Home />}></Route>
+          <Route path='/' element={<Home />}></Route>
           <Route path='/landing' element={<Landing />}></Route>
           <Route path='/inicio' element={<Inicio />}></Route>
           <Route path='/explorar' element={<Explorar />}></Route>
@@ -29,8 +30,9 @@ function App() {
           <Route path='/modal' element={<ModalPost />}></Route>
 
           <Route path='/login' element={<Login />}></Route>
-          <Route path='*' element={<Error />}></Route>
+          <Route path='/*' element={<Error />}></Route>
         </Routes>
+        <Footer></Footer>
       </Router>
     </div>
   );

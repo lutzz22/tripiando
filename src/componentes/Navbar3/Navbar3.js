@@ -5,17 +5,16 @@ import '../Navbar3/style.css'
 
 const Navbar = () => {
     return (
-    <div className='container-fluid pt-3 pb-5'>
+    <div>
         <nav className="navbar text-decoration-none styleNavbar ">
             <div className='w-100 d-flex justify-content-around align-items-center'>
 
-                <Link to="#" className='titulos'>Inicio</Link>
+                <Link to="/landing" className='titulos'>Inicio</Link>
 
                 <h1><Link to='/home' className='titulo'>Tripiando</Link></h1>
 
                 <nav className='d-flex list-unstyled '>
-                    <li className="breadcrumb-item"><Link to="/login" className='titulos'>Iniciar sesión</Link></li>
-                    <li className=""><Link to="/login" className='titulos'>Registrarse</Link></li>
+                    <li className="breadcrumb-item"><Link to="/login" className='titulos'>Iniciar sesión / Registrate</Link></li>
                 </nav>
 
             </div>

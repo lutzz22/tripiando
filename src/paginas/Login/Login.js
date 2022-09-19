@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar2 from '../../componentes/Navbar2/Navbar2'
+import Navbar3 from '../../componentes/Navbar3/Navbar3'
 import './style.css'
 
 const Login = () => {
   return (
     <>
-    <Navbar2/>
+    <Navbar3/>
       <div id='formularios' className='row'>
         <h2>Inicia Sesion o Registrate aca</h2>
         <div id='inicioSesion' className='col-3'>

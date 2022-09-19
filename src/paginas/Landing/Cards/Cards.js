@@ -1,5 +1,4 @@
-// import { React } from 'react'
-// import { Link } from 'react-router-dom';
+
 import React from 'react'
 import mendoza from "../../Imagenes/mendoza.jpg"
 import './style.css'
