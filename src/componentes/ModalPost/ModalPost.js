@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src/componentes/Post/ModalPost.js
-=======
 import React from 'react'
 // import {useEffect, useState } from "react";
 import Modal from '../ModalPost/Modal'
@@ -23,5 +21,4 @@ const ModalPost = () => {
 
 export default ModalPost
 
->>>>>>> flor:src/componentes/ModalPost/ModalPost.js
 
