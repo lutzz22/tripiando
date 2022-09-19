@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../Navbar/style.css'
+import ModalPost from '../ModalPost/ModalPost'
+import Modal from '../ModalPost/Modal'
+import '../ModalPost/style.css'
+
+
+
 
 const Navbar = () => {
+
   return (
     <>
       <div id='nav'>
@@ -27,8 +34,9 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button id='post'className='btn btn-primary'> NUEVO POST </button>
+        <button id='post'className='btn btn-primary' > NUEVO POST </button>
       </div>
+
     </>
   )
 }

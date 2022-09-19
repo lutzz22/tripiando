@@ -1,0 +1,48 @@
+.modal{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.304);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.modal-is-open{
+    display: flex;
+}
+
+.modal-container{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    padding: 2rem;
+    background-color: #ABC9FF;
+    border: 3px solid blue
+}
+
+.modal-text{
+    text-align: center;
+    border: 2px solid red;
+}
+
+
+.modal-postear{
+    position: absolute;
+    width: 15%;
+    right: 1rem;
+    border: 3px solid green
+}
+
+.modal-close{
+    position: absolute;
+    width: 5%;
+    top: 1rem;
+    right: 1rem;
+    border: 3px solid green
+}
+

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
@@ -11,6 +11,9 @@ import Perfil from './paginas/Perfil/Perfil';
 import Error from './paginas/Error/index';
 import Login from './paginas/Login';
 
+import ModalPost from './componentes/ModalPost/ModalPost';
+
+
 function App() {
   return (
     <div>
@@ -22,6 +25,9 @@ function App() {
           <Route path='/explorar' element={<Explorar />}></Route>
           <Route path='/favoritos' element={<Fav />}></Route>
           <Route path='/perfil' element={<Perfil />}></Route>
+
+          <Route path='/modal' element={<ModalPost />}></Route>
+
           <Route path='/login' element={<Login />}></Route>
           <Route path='*' element={<Error />}></Route>
         </Routes>
