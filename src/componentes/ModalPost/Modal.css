@@ -18,31 +18,78 @@
 
 .modal-container{
     position: relative;
-    width: 50%;
+    width: 40%;
     height: 50%;
     padding: 2rem;
+    border-radius: 40px;
     background-color: #ABC9FF;
-    border: 3px solid blue
+    /* border: 3px solid blue */
 }
 
 .modal-text{
     text-align: center;
-    border: 2px solid red;
+    /* border: 2px solid green; */
+}
+
+::placeholder{
+    padding-left: 3%;
+    margin-left: 20%;
+    text-align: start;
+    font-size: 14px;
+    color:#1e409f7b;
+    /* border: 1px solid red */
+}
+
+.modal-input{
+    width: 80%;
+    margin-bottom: 1%;
+    border: none;
+    border-radius: 30px;
+    background-color: #d4e3ff;
+    
+}
+
+.modal-input-descripcion{
+    width: 80%;
+    padding-bottom: 18%;
+    border: none;
+    border-radius: 20px;
+    background-color: #d4e3ff;;
 }
 
 
 .modal-postear{
     position: absolute;
-    width: 15%;
-    right: 1rem;
-    border: 3px solid green
+    width: 16%;
+    height: 10%;
+    right: 6rem;
+    bottom: 2rem;
+    border: none;
+    border-radius: 40px;
+    background-color:  #1e409f;
+    color: white;
+    /* border: 3px solid green */
+}
+
+.modal-postear:hover{
+    color: #1e409f;
+    background-color: #d4e3ff;
 }
 
 .modal-close{
     position: absolute;
     width: 5%;
-    top: 1rem;
-    right: 1rem;
-    border: 3px solid green
+    top: 2rem;
+    right:2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    border: none;
+    background-color: #ABC9FF;
+    color:  #1e409f;
+    /* border: 3px solid green */
+}
+
+.modal-close:hover{
+    color: #d4e3ff;
 }
 

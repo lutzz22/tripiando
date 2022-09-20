@@ -14,6 +14,7 @@ const ModalPost = () => {
             
             <button onClick={modalOpen}> Nuevo Post </button>
             <Modal isOpen={isOpenModal} isClose={modalClose}></Modal>
+
         </div>
         
     ]

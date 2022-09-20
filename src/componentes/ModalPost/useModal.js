@@ -6,7 +6,8 @@ export const useModal = (initialValue = false) => {
 
     const openModal= () => setIsOpen(true);
     const closeModal= () => setIsOpen(false);
-    
+
+
 
     return [isOpen, openModal, closeModal]
 }
