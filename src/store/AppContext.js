@@ -18,7 +18,7 @@ const UserProvider = ({children}) => {
     
 
     return (
-        <Context.Provider value={{useModal }}>
+        <Context.Provider value={{useModal}}>
             {children}
         </Context.Provider>
     )

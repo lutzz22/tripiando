@@ -10,10 +10,12 @@
     justify-content: center;
     align-items: center;
 }
+
 h3{ 
     text-align: center;
     color: #1e409f;
 }
+
 .modal-is-open{
     display: flex;
 }
@@ -21,7 +23,7 @@ h3{
 .modal-container{
     position: relative;
     width: 40%;
-    height: 50%;
+    height: 55%;
     padding: 2rem;
     border-radius: 40px;
     background-color: #ABC9FF;
@@ -29,7 +31,10 @@ h3{
 }
 
 .modal-text{
+    justify-content: center;
+    align-items: center;
     text-align: center;
+
     /* border: 2px solid green; */
 }
 

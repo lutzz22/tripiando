@@ -9,7 +9,6 @@ return (
         
         <div className= {`modal ${isOpen && "modal-is-open"}`}>
             
-           
                 <div id='modal' className= 'modal-container' >
                         <h3> NUEVO POSTEO </h3>
                         <button className= 'modal-close' onClick={isClose} > X </button>
