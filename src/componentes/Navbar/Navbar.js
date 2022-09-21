@@ -1,14 +1,16 @@
-import React from 'react'
+import {React, useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import '../Navbar/style.css'
-import ModalPost from '../ModalPost/ModalPost'
 import Modal from '../ModalPost/Modal'
-import '../ModalPost/style.css'
+import { Context } from '../../store/AppContext'
 
 
 
 
 const Navbar = () => {
+
+  const { useModal } = useContext(Context)
+  const[isOpenModal, modalOpen, modalClose] = useModal(false);
 
   return (
     <>
@@ -34,7 +36,8 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button id='post'className='btn btn-primary' > NUEVO POST </button>
+        <button id='post'className='btn btn-primary' onClick={modalOpen} > NUEVO POST </button>
+        <Modal isOpen={isOpenModal} isClose={modalClose}></Modal>
       </div>
 
     </>

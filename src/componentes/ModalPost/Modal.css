@@ -9,9 +9,11 @@
     display: none;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
-
+h3{ 
+    text-align: center;
+    color: #1e409f;
+}
 .modal-is-open{
     display: flex;
 }
