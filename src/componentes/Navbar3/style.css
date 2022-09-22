@@ -24,3 +24,21 @@
 .titulo:hover{
     color: white;
 }
+
+@media screen and (max-width: 767px) {
+    nav div{
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .titulos {
+        font-size: x-small;
+    }
+
+    .titulo {
+
+        padding-left: 15px;
+        font-size: smaller;
+    }
+
+}

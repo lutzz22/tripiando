@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className='w-100 d-flex justify-content-around align-items-center'>
 
                 <Link to="/landing" className='titulos'>Inicio</Link>
-
+                
                 <h1><Link to='/home' className='titulo'>Tripiando</Link></h1>
 
                 <nav className='d-flex list-unstyled '>
