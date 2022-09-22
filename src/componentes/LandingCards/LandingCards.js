@@ -7,7 +7,7 @@ import '../LandingCards/style.css'
 const Cards = () => {
     return (
     <div className='container'>
-        <div className='rows d-flex justify-content-around'>
+        <div className='rows mt-5  d-flex justify-content-around'>
 
             <div className="card style=width: 18rem col-3 cards">
                 <img src = {mendoza} className= " card-img-top" alt="..."/>
