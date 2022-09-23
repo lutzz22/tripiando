@@ -11,7 +11,7 @@ const Navbar = () => {
 
                 <Link to="/landing" className='titulos'>Inicio</Link>
 
-                <h1><Link to='/home' className='titulo'>Tripiando</Link></h1>
+                <h1><Link to='/' className='titulo'>Tripiando</Link></h1>
 
                 <nav className='d-flex list-unstyled '>
                     <li className="breadcrumb-item"><Link to="/login" className='titulos'>Iniciar sesión / Registrate</Link></li>

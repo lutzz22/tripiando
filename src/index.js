@@ -6,14 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
 import UserProvider from './store/AppContext';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+    <Router>
     <UserProvider>
       <App />
     </UserProvider>
-  </React.StrictMode>
+    </Router>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

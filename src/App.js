@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
@@ -11,26 +11,31 @@ import Perfil from './paginas/Perfil/Perfil';
 import Error from './paginas/Error/Error';
 import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
+import { useContext } from 'react';
+import { Context } from './store/AppContext';
+import Cookies from 'js-cookie';
 
 
 
 
 function App() {
+
+  
+  const usuario = localStorage.getItem('usuario')
+  console.log(usuario)
   return (
     <div>
-      <Router>
         <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/landing' element={<Landing />}></Route>
-          <Route path='/inicio' element={<Inicio />}></Route>
-          <Route path='/explorar' element={<Explorar />}></Route>
-          <Route path='/favoritos' element={<Fav />}></Route>
-          <Route path='/perfil' element={<Perfil />}></Route>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='/*' element={<Error />}></Route>
+          <Route path='/' element={<Home></Home>} />
+          <Route path='/landing' element={<Landing />}/>
+          <Route path='/login' element={<Login />}/>
+          <Route path='/inicio' element={usuario === 'si' ? <Inicio /> :<Navigate to='/'/>}/>
+          <Route path='/explorar' element={usuario !== null ? <Explorar /> :<Navigate to='/'/>}/>
+          <Route path='/favoritos' element={usuario !== null ? <Fav /> :<Navigate to='/'/>}/>
+          <Route path='/perfil' element={usuario !== null ? <Perfil /> :<Navigate to='/'/>}/>
+          <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer></Footer>
-      </Router>
     </div>
   );
 }
