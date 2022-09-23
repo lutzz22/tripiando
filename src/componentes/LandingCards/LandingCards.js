@@ -6,24 +6,40 @@ import '../LandingCards/style.css'
 
 const Cards = () => {
     return (
+        <body className='color'>
     <div className='container'>
-        <div className='rows mt-5  d-flex justify-content-around'>
+        
+        <div className='d-flex flex-wrap justify-content-around'>
 
-            <div className="card style=width: 18rem col-3 cards">
+            <div className="card mb-3" style={{width: "14rem"}}>
                 <img src = {mendoza} className= " card-img-top" alt="..."/>
                 <div className="card-body">
                     <p className="card-text">5 cosas que no te podes perder en el Calafate</p>
                 </div>
             </div>
 
-            <div className="card style=width: 18rem col-3 cards">
+            <div className="card mb-3" style={{width: "14rem"}}>
                 <img src={mendoza} className= " card-img-top" alt="..."/>
                 <div className="card-body">
                     <p className="card-text">Las mejores bodegas de Mendoza</p>
                 </div>
             </div>
 
-            <div className="card style=width: 18rem col-3 cards">
+            <div className="card mb-3" style={{width: "14rem"}}>
+                <img src={mendoza} className= " card-img-top" alt="..."/>
+                <div className="card-body">
+                    <p className="card-text">Las mejores bodegas de Mendoza</p>
+                </div>
+            </div>
+
+            <div className="card mb-3" style={{width: "14rem"}}>
+                <img src={mendoza} className= " card-img-top" alt="..."/>
+                <div className="card-body">
+                    <p className="card-text">Las mejores bodegas de Mendoza</p>
+                </div>
+            </div>
+
+            <div className="card mb-3" style={{width: "14rem"}}>
                 <img src={mendoza} className=" card-img-top" alt="..."/>
                 <div className="card-body">
                     <p className="card-text">Lugares, buenos, bonitos y baratos para comer en Pinamar</p>
@@ -31,6 +47,7 @@ const Cards = () => {
             </div> 
         </div>
     </div>
+    </body>
     )
 }
 
