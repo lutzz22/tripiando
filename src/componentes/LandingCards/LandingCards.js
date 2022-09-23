@@ -8,7 +8,8 @@ const Cards = () => {
     return (
         <body className='color'>
     <div className='container'>
-        <div className='d-flex flex-wrap  justify-content-around'>
+        
+        <div className='rows mt-5  d-flex justify-content-around'>
 
             <div className="card mb-3" style={{width: "14rem"}}>
                 <img src = {mendoza} className= " card-img-top" alt="..."/>
