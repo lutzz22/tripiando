@@ -72,13 +72,10 @@ const UserProvider = ({children}) => {
         getPosts()
       }, [])
 
-      useEffect(() => {
-        getUserPost()
-      }, [])
         
     
     return (
-        <Context.Provider value={{useModal, userLogin, email, setEmail, pasword, setPasword, user, posts, setPosts, getPosts, getUserPost, userPost, setUserPost}}>
+        <Context.Provider value={{useModal, userLogin, email, setEmail, pasword, setPasword, user, posts, setPosts, getPosts}}>
             {children}
         </Context.Provider>
     )
