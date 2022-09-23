@@ -45,7 +45,18 @@ const UserProvider = ({children}) => {
         }
     }
 
+    const [posts, setPosts] = useState([])
 
+    const getPosts = async() => {
+        const response = await axios.get(`${BASE_URL}/posts`)
+
+        const posteos = await response.data.posts 
+
+        setPosts(posteos)
+        console.log(posteos)
+    }
+
+    const [userPost, setUserPost] = useState([])
 
     const useModal = (initialValue = false) => {
         const [isOpen, setIsOpen] = useState (initialValue);
@@ -56,9 +67,18 @@ const UserProvider = ({children}) => {
     
         return [isOpen, openModal, closeModal]
     }
+
+    useEffect(() => {
+        getPosts()
+      }, [])
+
+      useEffect(() => {
+        getUserPost()
+      }, [])
+        
     
     return (
-        <Context.Provider value={{useModal, userLogin, email, setEmail, pasword, setPasword, user}}>
+        <Context.Provider value={{useModal, userLogin, email, setEmail, pasword, setPasword, user, posts, setPosts, getPosts, getUserPost, userPost, setUserPost}}>
             {children}
         </Context.Provider>
     )

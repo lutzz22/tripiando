@@ -22,7 +22,7 @@ function App() {
 
   
   const usuario = localStorage.getItem('usuario')
-  console.log(usuario)
+  // console.log(usuario)
   return (
     <div>
         <Routes>

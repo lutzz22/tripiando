@@ -1,24 +1,27 @@
 import { React } from 'react'
-// import { Link } from 'react-router-dom';
 import '../../componentes/LandingCards/LandingCards'
 import mendoza from "../../imagenes/mendoza.jpg"
 import '../LandingCards/style.css'
 
-const Cards = () => {
+const Cards = (props) => {
+
+    const {tittle, post} = props;
+
     return (
-        <body className='color'>
+    
     <div className='container'>
-        
+        <div className='color'>
         <div className='d-flex flex-wrap justify-content-around'>
 
             <div className="card mb-3" style={{width: "14rem"}}>
                 <img src = {mendoza} className= " card-img-top" alt="..."/>
                 <div className="card-body">
-                    <p className="card-text">5 cosas que no te podes perder en el Calafate</p>
+                    <h6>{tittle}</h6>
+                    <p className="card-text">{post}</p>
                 </div>
             </div>
 
-            <div className="card mb-3" style={{width: "14rem"}}>
+            {/* <div className="card mb-3" style={{width: "14rem"}}>
                 <img src={mendoza} className= " card-img-top" alt="..."/>
                 <div className="card-body">
                     <p className="card-text">Las mejores bodegas de Mendoza</p>
@@ -44,10 +47,10 @@ const Cards = () => {
                 <div className="card-body">
                     <p className="card-text">Lugares, buenos, bonitos y baratos para comer en Pinamar</p>
                 </div>
-            </div> 
+            </div>  */}
         </div>
     </div>
-    </body>
+    </div>
     )
 }
 
