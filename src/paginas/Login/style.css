@@ -1,5 +1,9 @@
+body{
+    overflow: hidden;
+}
+
 #formularios{
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,3 +14,28 @@ h2{
     margin-bottom: 10vh;
 }
 
+@media screen and (max-width: 767px) {
+    body{
+        overflow: scroll;
+    }
+    
+    #formularios{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #inicioSesion{
+       padding: 0%;
+       width: 70%;
+    }
+
+    #registro{
+        padding: 0%;
+        width: 70%;
+    }
+
+    h6{
+        padding: 10px;
+    }
+
+}
