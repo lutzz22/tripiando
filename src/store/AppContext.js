@@ -59,11 +59,6 @@ const UserProvider = ({children}) => {
 
 
 
-//SweetAlert
-
-
-
-
     const [posts, setPosts] = useState([])
 
     const getPosts = async() => {
@@ -76,10 +71,7 @@ const UserProvider = ({children}) => {
     }
 
 
-
     const [userPost, setUserPost] = useState([])
-
-
 
 
     const useModal = (initialValue = false) => {
