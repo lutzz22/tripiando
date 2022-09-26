@@ -2,7 +2,9 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/BASE_URL";
-import Cookies from 'js-cookie'
+
+import Swal from "sweetalert2";
+// import Cookies from 'js-cookie'
 
 
 
@@ -14,6 +16,10 @@ const UserProvider = ({children}) => {
     const [email, setEmail] = useState('')
     const [pasword, setPasword] = useState('')
     const navigate = useNavigate()
+
+    const mostrarAlerta = () => {
+        
+    }
 
     const userLogin = async(email, pasword) => {
 
@@ -37,13 +43,26 @@ const UserProvider = ({children}) => {
             } else{
                 setEmail('')
                 setPasword('')
-                alert('usuario no encontrado')
+                (Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Usuario no encontrado',
+                }))
+                // alert(`${mostrarAlerta}`)
+                // alert('usuario no encontrado')
             }
 
         } catch (error) {
             console.log(error)
         }
     }
+
+
+
+//SweetAlert
+
+
+
 
     const [posts, setPosts] = useState([])
 
@@ -56,7 +75,12 @@ const UserProvider = ({children}) => {
         console.log(posteos)
     }
 
+
+
     const [userPost, setUserPost] = useState([])
+
+
+
 
     const useModal = (initialValue = false) => {
         const [isOpen, setIsOpen] = useState (initialValue);
@@ -70,7 +94,7 @@ const UserProvider = ({children}) => {
 
     useEffect(() => {
         getPosts()
-      }, [])
+    }, [])
 
         
     
