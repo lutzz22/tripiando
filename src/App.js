@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle'
@@ -13,6 +13,7 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
+import Posteo from './componentes/Posteo';
 // import Cookies from 'js-cookie';
 
 
@@ -21,18 +22,19 @@ import { Context } from './store/AppContext';
 function App() {
 
   
-  const usuario = localStorage.getItem('usuario')
+  const { isLoggedIn } = useContext(Context)
   // console.log(usuario)
   return (
     <div>
         <Routes>
+          <Route path='/posteo' element={<Posteo></Posteo>}></Route>
           <Route path='/' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
-          <Route path='/inicio' element={usuario === 'si' ? <Inicio /> :<Navigate to='/'/>}/>
-          <Route path='/explorar' element={usuario !== null ? <Explorar /> :<Navigate to='/'/>}/>
-          <Route path='/favoritos' element={usuario !== null ? <Fav /> :<Navigate to='/'/>}/>
-          <Route path='/perfil' element={usuario !== null ? <Perfil /> :<Navigate to='/'/>}/>
+          <Route path='/inicio' element={isLoggedIn ? <Inicio /> : <Home />}/>
+          <Route path='/explorar' element={isLoggedIn ? <Explorar /> : <Home />}/>
+          <Route path='/favoritos' element={isLoggedIn ? <Fav /> : <Home />}/>
+          <Route path='/perfil' element={isLoggedIn ? <Perfil /> : <Home />}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer></Footer>

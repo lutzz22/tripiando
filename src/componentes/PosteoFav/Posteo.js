@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import { Context } from '../../store/AppContext';
 import './style.css'
 
-const Posteo = (props) => {
-    const {addFavs, contador} = useContext(Context)
+const PosteoFav = (props) => {
+    const {deleteFavs} = useContext(Context)
     const {id, category, username, tittle, post, posteo} = props;
+    const {contador} = useContext(Context)
 
   return (
     <div>
@@ -14,10 +15,9 @@ const Posteo = (props) => {
           </div>
           <div className="card-body">
             <p>{post}</p>
-            
-            <div className=" category mb-0">
+            <div className="blockquote-footer category mb-0">
             <cite className='user'title="Source Title">@{username}</cite>
-            <a><i onClick={()=> addFavs(posteo)} className="cora bi bi-suit-heart ">{contador}</i></a> 
+            <a><i onClick={()=> deleteFavs(id)} className="cora bi bi-suit-heart-fill"></i></a>
             </div>
           </div>
         </div>
@@ -25,4 +25,4 @@ const Posteo = (props) => {
   )
 }
 
-export default Posteo
+export default PosteoFav
