@@ -1,10 +1,9 @@
-import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/BASE_URL";
-
+import axios from "axios";
 import Swal from "sweetalert2";
-// import Cookies from 'js-cookie'
+import Cookies from 'js-cookie'
 
 
 
@@ -12,29 +11,32 @@ import Swal from "sweetalert2";
 export const Context = createContext(null)
 const UserProvider = ({children}) => {
 
-    const [user, setUser] = useState({})
+
+    const [user, setUser] = useState(Cookies.get('user') ? JSON.parse(Cookies.get('user')) : '')
+    const [isLoggedIn, setIsLoggedIn] = useState(Cookies.get('isLoggedIn') ? JSON.parse(Cookies.get('isLoggedIn')) : false)
     const [email, setEmail] = useState('')
     const [pasword, setPasword] = useState('')
     const navigate = useNavigate()
 
+    console.log(user)
+
+////////////////////////////////////////// USUARIOS ////////////////////////////////////////////
 
     const userLogin = async(email, pasword) => {
 
-        const objeto = {email, pasword}
-        // console.log(user)
+        const userData = {email, pasword}
 
         try {
-            const response = await axios.post(`${BASE_URL}/user/login`, objeto) 
+            const response = await axios.post(`${BASE_URL}/user/login`, userData) 
 
             const data = await response.data
-
-            // console.log(response)
-            // console.log(data)
+            const existe = await data.existe
 
             if(response.status === 200){
-                
-                // Cookies.set('usuario', 'true')
-                localStorage.setItem('usuario', 'si')
+                setUser(data.usuario)
+                setIsLoggedIn(existe)
+                setEmail('')
+                setPasword('')
                 navigate('/inicio')
                 
             } else{
@@ -43,7 +45,7 @@ const UserProvider = ({children}) => {
                 (Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Usuario no encontrado',
+                    text: 'Usuario o constaseña incorrecto',
                 }))
             }
 
@@ -52,10 +54,16 @@ const UserProvider = ({children}) => {
         }
     }
 
+    useEffect(() => {
+        Cookies.set('user', JSON.stringify(user))
+        Cookies.set('isLoggedIn', isLoggedIn)
 
+    }, [user, isLoggedIn])
 
+/////////////////////////////////////// POSTEOS ///////////////////////////////////////////////////////
     const [posts, setPosts] = useState([])
-
+    const [userPost, setUserPost] = useState([])
+    
     const getPosts = async() => {
         const response = await axios.get(`${BASE_URL}/posts`)
 
@@ -65,9 +73,32 @@ const UserProvider = ({children}) => {
         console.log(posteos)
     }
 
+    useEffect(() => {
+        getPosts()
+    }, [])
+    
 
-    const [userPost, setUserPost] = useState([])
+ ///////////////////////////////////////// FUNCIONES //////////////////////////////////////////   
 
+    const [contador, setContador] = useState(0)
+    const [postFavs, setPostFavs] = useState([])
+
+    const addFavs = (posteo) => {
+        const postFavorito = postFavs.find(f => f.id === posteo.id)
+
+        if(postFavorito){
+            alert('el posteo ya se encuentra en favoritos')
+            setPostFavs([...postFavs])
+        }else{
+            setPostFavs([...postFavs, {posteo}])
+            setContador(contador+1)
+        }
+    }
+
+    const deleteFavs = (id) =>{
+        setContador(contador-1)
+        return setPostFavs(postFavs.filter((f) => f.id !== id))
+    }
 
     const useModal = (initialValue = false) => {
         const [isOpen, setIsOpen] = useState (initialValue);
@@ -76,16 +107,31 @@ const UserProvider = ({children}) => {
         const closeModal= () => setIsOpen(false);
         
         return [isOpen, openModal, closeModal]
+    }   
+
+    const alert = () => {
+        (Swal.fire({
+            icon: 'warning',
+            title: 'Porfavor inicia sesion para ver todo el contenido',
+            
+        }))
     }
-
-    useEffect(() => {
-        getPosts()
-    }, [])
-
-        
     
     return (
-        <Context.Provider value={{useModal, userLogin, email, setEmail, pasword, setPasword, user, posts, setPosts, getPosts}}>
+        <Context.Provider value={{
+            useModal, 
+            userLogin, 
+            email, setEmail, 
+            pasword, setPasword, 
+            user, 
+            posts, setPosts, 
+            getPosts,
+            isLoggedIn, setIsLoggedIn,
+            postFavs, setPostFavs,
+            contador, setContador,
+            addFavs,
+            deleteFavs,
+            alert}}>
             {children}
         </Context.Provider>
     )

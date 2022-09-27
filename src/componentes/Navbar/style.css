@@ -1,10 +1,11 @@
 #nav {
+    /* position: fixed; */
     width: 20%;
     display: flex;
     flex-direction: column;
     height: 100vh;
     align-items: center;
-    background-color: rgba(242, 242, 242, 0.532);
+    /* background-color: rgba(242, 242, 242, 0.532); */
     border-right: 1px solid rgba(128, 128, 128, 0.526);
 }
 
@@ -35,6 +36,8 @@ ul{
     justify-content: space-evenly;
     align-items:flex-start;
     height: 40vh;
+    margin: 0 auto;
+    width: 60%;
 }
 
 .perfil{
@@ -44,7 +47,7 @@ ul{
 #post {
     margin: 0 auto;
     margin-top: 25vh;
-    width: 300px;
+    width: 80%;
     border-radius: 20px;
     font-weight: 600;
     background-color: blue;
