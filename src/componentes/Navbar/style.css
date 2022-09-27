@@ -11,11 +11,11 @@
 
 h2{
     font-size: 40px;
-    margin-top: 70px;
+    margin-top: 15px;
     color: blue;
 }
 
-i{
+#nav ul li i{
     margin-right: 20px;
 }
 
@@ -45,11 +45,83 @@ ul{
 }
 
 #post {
-    margin: 0 auto;
-    margin-top: 25vh;
-    width: 80%;
+    margin: 30px;
+    margin-top: 20vh;
+    width: 65%;
+    position: absolute;
+    display: block;
     border-radius: 20px;
     font-weight: 600;
     background-color: blue;
     border: none;
+}
+
+.checkbtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    #nav {
+        width: 70%;
+        height: 100%;
+        margin: 0;
+        position: absolute;
+        float: none;
+        display: block;
+        left: -100%;
+        transition: all .5s;
+    }
+
+    .checkbtn {
+        display: block;
+        width: 100%;
+        background-color: rgba(242, 242, 242, 0.532);
+    }
+
+    .checkbtn .menu {
+        display: block;
+        padding: 20px;
+        background-color: rgba(242, 242, 242, 0.532);
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .checkbtn i {
+        float: right;
+    }
+
+    #check:checked ~ #nav{
+        left:0;
+    }
+
+    #post{
+        width: 60%;
+        position: absolute;
+        float: none;
+        display: block;
+        margin: 33px;
+    }
+
+    button{
+        justify-content: center;
+        justify-items: center;
+    }
+
+    h2{
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width : 768px ) and (max-width : 1023px ) {
+    #nav{
+        width: 30%;
+    }
 }

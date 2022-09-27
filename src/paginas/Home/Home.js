@@ -20,21 +20,12 @@ const Home = () => {
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img src={img1} className="d-block w-100 h-100" alt="..."/>
-              <div className="carousel-caption d-none d-md-block">
-                <h5>"No dejes para mañana el viaje que podes hacer hoy"</h5>
-              </div>
             </div>
             <div className="carousel-item active">
               <img src={img2} className="d-block w-100 h-100" alt="..."/>
-              <div className="carousel-caption d-none d-md-block margin">
-                <h5>"Si no escalas la montaña, jamás podrás disfrutar del paisaje"</h5>
-              </div>
             </div>
             <div className="carousel-item active">
               <img src={img3} className="d-block w-100 h-100" alt="..."/>
-              <div className="carousel-caption d-none d-md-block margin">
-                <h5>"Viaja, no para escapar de la vida, sino para que la vida no se escape"</h5>
-              </div>
             </div>
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -47,12 +38,6 @@ const Home = () => {
           </button>
         </div>
       </div> 
-      {/* <div className='imagen'>
-        <img src={img1}/>
-        <div className="carousel-caption d-flex d-md-block">
-            <h5>"Viaja, no para escapar de la vida, sino para que la vida no se escape"</h5>
-        </div>
-      </div>  */}
     </div>
     </>
     

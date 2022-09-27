@@ -10,6 +10,7 @@ const Landing = () => {
   console.log(posts)
 
   return (
+    <body style={{backgroundColor: "#ABC9FF"}}>
     <div className='styleLanding'>
       <Navbar3/>
       <div className='d-flex justify-content-between'>
@@ -20,6 +21,7 @@ const Landing = () => {
           }
       </div>
     </div>
+    </body>
   )
 }
 

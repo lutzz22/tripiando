@@ -1,32 +1,24 @@
-
 .carousel-inner{
-    height: 92vh;
-}
-
-.imagen {
     height: 93vh;
+}
+
+.carousel-item {
+    height: 100%;
     width: 100%;
-}
-
-
-h5 {
-    font-variant: small-caps;
-    margin: 0 auto;
-    width: 50vw;
-    font-size: 60px;
-    margin-bottom: 27%;
-    padding-bottom: 80px;
-}
-
-.margin{
-    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 767px) {
     
     .carousel-inner{
-        height: 100%;
         width: 100%;
+        justify-items: center;
+        justify-content: center;
     }
 }
 
+@media screen and (min-width : 768px ) and (max-width : 1023px ) {
+    .carousel-inner{
+        height: 87vh;
+        width: 100%;
+    }
+}

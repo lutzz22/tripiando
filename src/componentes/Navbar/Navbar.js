@@ -14,6 +14,11 @@ const Navbar = () => {
 
   return (
     <>
+        <input type="checkbox" id="check"></input>
+        <label for="check" class="checkbtn">
+          <a className='menu'><i class="bi bi-list"></i>Menu</a>
+        </label>
+
       <div id='nav'>
         <h2>TRIPIANDO</h2>
 
@@ -39,7 +44,6 @@ const Navbar = () => {
         <button id='post'className='btn btn-primary' onClick={modalOpen} > NUEVO POST </button>
         <Modal isOpen={isOpenModal} isClose={modalClose}></Modal>
       </div>
-
     </>
   )
 }
