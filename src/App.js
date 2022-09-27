@@ -27,8 +27,8 @@ function App() {
   return (
     <div>
         <Routes>
-          <Route path='/posteo' element={<Posteo></Posteo>}></Route>
-          <Route path='/' element={<Home></Home>} />
+          <Route path='/posteo' element={<Posteo/>}/>
+          <Route path='/' element={<Home/>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/inicio' element={isLoggedIn ? <Inicio /> : <Home />}/>

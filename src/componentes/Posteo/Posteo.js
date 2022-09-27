@@ -28,7 +28,7 @@ const Posteo = (props) => {
             
             <div className=" category mb-0">
               <cite className='user'title="Source Title">@{username}</cite>
-              <Link><i onClick={()=> addFavs(posteo)} className="cora bi bi-suit-heart ">{contador}</i></Link> 
+              <Link to="/" ><i onClick={()=> addFavs(posteo)} className="cora bi bi-suit-heart ">{contador}</i></Link> 
             </div>
           </div>
         </div>
