@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <>
         <input type="checkbox" id="check"></input>
-        <label for="check" class="checkbtn">
-          <a className='menu'><i class="bi bi-list"></i>Menu</a>
+        <label htmlFor="check" className="checkbtn">
+          <a className='menu'><i className="bi bi-list"></i>TRIPIANDO</a>
         </label>
 
       <div id='nav'>
