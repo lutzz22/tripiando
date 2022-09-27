@@ -60,6 +60,8 @@ const UserProvider = ({children}) => {
 
     }, [user, isLoggedIn])
 
+    const createUser = async ()
+
 /////////////////////////////////////// POSTEOS ///////////////////////////////////////////////////////
     const [posts, setPosts] = useState([])
     const [userPost, setUserPost] = useState([])

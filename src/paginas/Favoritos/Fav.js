@@ -11,7 +11,7 @@ const Fav = () => {
     <>
       <div className='d-flex'>
       <Navbar/>
-      <div className='d-flex flex-column'>
+      <div className='d-flex flex-column posteos'>
           {
             postFavs.map(posteo => (
               <PosteoFav key={posteo.id} {...posteo} posteo={posteo}/>

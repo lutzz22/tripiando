@@ -16,7 +16,11 @@ const Navbar = () => {
     <>
         <input type="checkbox" id="check"></input>
         <label htmlFor="check" className="checkbtn">
+<<<<<<< HEAD
           <a className='menu'><i className="bi bi-list"></i>Menu</a>
+=======
+          <a className='menu'><i className="bi bi-list"></i>TRIPIANDO</a>
+>>>>>>> adbdfce3047a8ebc43d97dc21c27266e40c3026c
         </label>
 
       <div id='nav'>

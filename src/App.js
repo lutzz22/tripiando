@@ -13,7 +13,6 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
-import Posteo from './componentes/Posteo';
 // import Cookies from 'js-cookie';
 
 
@@ -27,8 +26,12 @@ function App() {
   return (
     <div>
         <Routes>
+<<<<<<< HEAD
           <Route path='/posteo' element={<Posteo/>}/>
           <Route path='/' element={<Home/>} />
+=======
+          <Route path='/' element={<Home></Home>} />
+>>>>>>> adbdfce3047a8ebc43d97dc21c27266e40c3026c
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/inicio' element={isLoggedIn ? <Inicio /> : <Home />}/>
