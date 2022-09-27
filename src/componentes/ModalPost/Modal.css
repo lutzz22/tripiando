@@ -100,3 +100,98 @@ h3{
     color: #d4e3ff;
 }
 
+@media screen and (max-width: 767px) {
+    
+    #modal{
+        width: 90%;
+        height: 70%;
+        align-items: center;
+    }
+
+    .modal-container{
+        padding: 0%;
+    }
+
+    h3{
+        margin-top: 17px;
+    }
+
+    .modal-close{
+        margin-top: -19px;
+    }
+
+    .modal-text{
+        padding: 1px 2px;
+    }
+
+    .modal-input-descripcion{
+        padding-bottom: 10%;
+    }
+
+    .button{
+        width: 50%;
+        
+    }
+
+    .modal-postear{
+        width: 25%;
+    }
+
+    button.modal-postear{
+        
+        left: 37%;
+        
+    }
+}
+
+@media screen and (min-width : 768px ) and (max-width : 1023px ) {
+    #modal{
+        width: 60%;
+        height: 70%;
+        align-items: center;
+    }
+
+    .modal-container{
+        padding: 0;
+    }
+
+    h3{
+        margin-top: 17px;
+    }
+
+    .modal-close{
+        margin-top: -20px;
+    }
+
+    .modal-input-descripcion{
+        padding-bottom: 10%;
+    }
+
+    button.modal-postear{
+        right: 10%;
+    }
+}
+
+@media screen and (min-width : 1024px ) {
+    #modal{
+        width: 60%;
+        height: 80%;
+        align-items: center;
+    }
+
+    .modal-container{
+        padding: 0;
+    }
+
+    h3{
+        margin-top: 30px;
+    }
+
+    .modal-close{
+        margin-top: -20px;
+    }
+
+    button.modal-postear{
+        right: 10%;
+    }
+}

@@ -13,7 +13,7 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
-import Cookies from 'js-cookie';
+//import Cookies from 'js-cookie';
 
 
 
