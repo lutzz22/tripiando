@@ -1,4 +1,4 @@
-import {React, useContext, useEffect}  from 'react'
+import {React, useContext}  from 'react'
 import Navbar from '../../componentes/Navbar/Navbar'
 import Posteo from '../../componentes/Posteo'
 import { Context } from '../../store/AppContext'
@@ -12,17 +12,17 @@ const Inicio = () => {
   console.log(posts)
 
   return (
-    <>
+    <div className='d-flex'>
       <Navbar/>
-      <div className='d-flex flex-wrap justify-content-between'>
+      <div className='d-flex flex-column posteos'>
           {
             posts.map(posteo => (
-              <Posteo key={posteo.id} {...posteo} />
+              <Posteo key={posteo.id} {...posteo} posteo={posteo}/>
             ))
           }
       </div>  
 
-    </>
+    </div>
   )
 }
 
