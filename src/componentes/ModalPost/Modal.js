@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../store/AppContext'
 // import {useEffect, useState } from "react";
 import '../ModalPost/Modal.css'
 
 
 const Modal = ({ children, isOpen, isClose }) => { 
+
 
 return (
         
@@ -28,14 +30,12 @@ return (
                         
                             <button className='modal-postear'> Postear </button>
                             {children}
-
-
                     </div>
                     
                 </div>
         </div>
-    )
 
+    )
 }
 
 export default Modal

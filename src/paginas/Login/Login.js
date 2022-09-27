@@ -15,7 +15,7 @@ const Login = () => {
 
   return (
     <>
-    <body>
+    {/* <body> */}
     <Navbar3/>
       <div id='formularios' className='row'>
         <h2>Inicia Sesion o Registrate aca</h2>
@@ -50,7 +50,7 @@ const Login = () => {
           <button type="submit" className="btn btn-primary">Registrarme</button>
         </div>
       </div>
-      </body>
+      {/* </body> */}
     </>
   )
 }

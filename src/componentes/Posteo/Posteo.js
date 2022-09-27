@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'; 
 
 const Posteo = (props) => {
 
@@ -11,8 +12,8 @@ const Posteo = (props) => {
                 <h5 className="card-title">{tittle}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">{category}</h6>
                 <p className="card-text">{post}</p>
-                <a href="#" className="card-link">{username}</a>
-                <a href="#" className="card-link">{id}</a>
+                <Link to="#" className="card-link">{username}</Link>
+                <Link to="#" className="card-link">{id}</Link>
             </div>
         </div>
     </div>
