@@ -24,7 +24,7 @@ function App() {
   const { isLoggedIn } = useContext(Context)
   // console.log(usuario)
   return (
-    <div>
+    <div className='aplicacion'>
         <Routes>
           <Route path='/' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>

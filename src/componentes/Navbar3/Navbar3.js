@@ -6,7 +6,7 @@ import '../Navbar3/style.css'
 const Navbar = () => {
     return (
     <div>
-        <nav className="navbar text-decoration-none styleNavbar ">
+        <nav className="text-decoration-none styleNavbar">
             <div className='w-100 d-flex justify-content-around align-items-center'>
 
                 <Link to="/landing" className='titulos'>Inicio</Link>

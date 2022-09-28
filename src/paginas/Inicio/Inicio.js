@@ -1,5 +1,4 @@
 import {React, useContext}  from 'react'
-import {ScrollView} from 'react-native'
 import Navbar from '../../componentes/Navbar/Navbar'
 import Posteo from '../../componentes/Posteo'
 import { Context } from '../../store/AppContext'

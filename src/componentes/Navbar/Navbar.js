@@ -19,7 +19,7 @@ const Navbar = () => {
           <a className='menu'><i className="bi bi-list"></i>TRIPIANDO</a>
         </label>
 
-      <div id='nav'>
+      <div id='nav' className='fixed-top'>
         <h2>TRIPIANDO</h2>
 
         <ul className='lista'>
