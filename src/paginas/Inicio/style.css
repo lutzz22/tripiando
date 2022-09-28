@@ -1,6 +1,14 @@
 .posteos {
     width: 55%;
-    /* border: 1px solid red; */
+    border: 1px solid red; 
     padding: 10px;
+    height: 100%;
+    
     /* align-items: center; */
 }
+
+.inicio {
+    width: 100%;
+}
+
+

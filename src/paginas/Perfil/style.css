@@ -1,0 +1,32 @@
+.miperfil {
+    width: 55%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* align-items: center; */
+}
+
+#parrafo{
+    width: 80%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.526);
+    margin: 0 auto;
+}
+
+#nombre, #cerrar{
+    padding: 3px;
+    border: 1px solid blue;
+    margin-top: 15px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: white;
+    color: blue;
+    width: 30%;
+
+}
+
+button:hover {
+    color: white;
+    background-color: blue;
+}

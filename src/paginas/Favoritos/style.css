@@ -1,4 +1,10 @@
-.posteos {
+.posteoos {
     width: 55%;
     padding: 10px;
+    /* overflow: scroll; */
+}
+
+.fav {
+    overflow: scroll;
+    height: 100%;
 }

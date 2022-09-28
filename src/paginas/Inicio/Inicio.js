@@ -1,4 +1,5 @@
 import {React, useContext}  from 'react'
+import {ScrollView} from 'react-native'
 import Navbar from '../../componentes/Navbar/Navbar'
 import Posteo from '../../componentes/Posteo'
 import { Context } from '../../store/AppContext'
@@ -12,7 +13,8 @@ const Inicio = () => {
   console.log(posts)
 
   return (
-    <div className='d-flex'>
+    <>
+     <div className='d-flex inicio'>
       <Navbar/>
       <div className='d-flex flex-column posteos'>
           {
@@ -23,6 +25,7 @@ const Inicio = () => {
       </div>  
 
     </div>
+    </>
   )
 }
 
