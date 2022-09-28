@@ -4,9 +4,8 @@ import React, { useContext } from 'react'
 import { Context } from '../../store/AppContext';
 import './style.css'
 
-const Posteo = (props) => {
+const Posteo = ( { username, tittle, post, posteo}) => {
     const {addFavs, contador} = useContext(Context)
-    const {id, category, username, tittle, post, posteo} = props;
 
   return (
     <div>

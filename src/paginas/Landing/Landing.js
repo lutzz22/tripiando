@@ -11,16 +11,16 @@ const Landing = () => {
 
   return (
     <div style={{backgroundColor: "#ABC9FF"}}>
-    <div className='styleLanding'>
-      <Navbar3/>
-      <div className='d-flex justify-content-between'>
-          {
-            posts.map(posteo => (
-              <LandingCards key={posteo.id} {...posteo} />
-            ))
-          }
+      <div className='styleLanding'>
+        <Navbar3/>
+        <div className='d-flex flex-wrap justify-content-center landing'>
+            {
+              posts.map(posteo => (
+                <LandingCards key={posteo.id} {...posteo} />
+              ))
+            }
+        </div>
       </div>
-    </div>
     </div>
   )
 }

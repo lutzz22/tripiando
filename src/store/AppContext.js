@@ -54,6 +54,34 @@ const UserProvider = ({children}) => {
         }
     }
 
+    const [username, setUsername] = useState('')
+    const [email2, setEmail2] = useState('')
+    const [pasword2, setPasword2] = useState('')
+
+    const createUser = async (username, email2, pasword2) => {
+        const userData = {username, email2, pasword2}
+
+        try{
+            const response = await axios.post(`${BASE_URL}/user/create`, userData)
+
+            const data = await response.data
+            
+            if(data){
+                setEmail2('')
+                setPasword2('')
+                setUsername('')
+                (Swal.fire({
+                    icon: 'success',
+                    title: data,
+                }))
+                navigate('/inicio')
+            }
+
+        }catch (error){
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
         Cookies.set('user', JSON.stringify(user))
         Cookies.set('isLoggedIn', isLoggedIn)
@@ -63,21 +91,57 @@ const UserProvider = ({children}) => {
 
 /////////////////////////////////////// POSTEOS ///////////////////////////////////////////////////////
     const [posts, setPosts] = useState([])
-    const [userPost, setUserPost] = useState([])
+
     
     const getPosts = async() => {
         const response = await axios.get(`${BASE_URL}/posts`)
 
-        const posteos = await response.data.posts 
+        const posteos = await response.data
 
         setPosts(posteos)
         console.log(posteos)
+    }
+
+    const [category, setCategory] = useState('')
+    const [tittle, setTittle] = useState('')
+    const [post, setPost] = useState('')
+
+    const createPost = async (category, username, tittle, post) =>{
+        username = user.username;
+
+        const posteo = {category, username, tittle, post}
+
+        const response = await axios.post(`${BASE_URL}/posts/create`, posteo)
+        const data = response.data
+        if(data) {
+            setCategory('')
+            setTittle('')
+            setPost('')
+            (Swal.fire({
+                icon: 'success',
+                title: data,
+            }))
+        }
+    }
+
+    const [userPost, setUserPost] = useState([])
+
+    const userPosts = async (username) => {
+       username = user.username;
+
+        const response = await axios.get(`${BASE_URL}/posts/:username`)
+        
+        setUserPost(response.data)
+        console.log (response.data)
     }
 
     useEffect(() => {
         getPosts()
     }, [])
     
+    useEffect(() => {
+        userPosts()
+    }, [])
 
  ///////////////////////////////////////// FUNCIONES //////////////////////////////////////////   
 
@@ -88,17 +152,20 @@ const UserProvider = ({children}) => {
         const postFavorito = postFavs.find(f => f.id === posteo.id)
 
         if(postFavorito){
-            alert('el posteo ya se encuentra en favoritos')
+            alert2()
             setPostFavs([...postFavs])
         }else{
-            setPostFavs([...postFavs, {posteo}])
+            setPostFavs([...postFavs, posteo])
             setContador(contador+1)
         }
     }
 
     const deleteFavs = (id) =>{
         setContador(contador-1)
-        return setPostFavs(postFavs.filter((f) => f.id !== id))
+        
+        setPostFavs(postFavs.filter((f) => f.id !== id))
+        console.log(postFavs)
+
     }
 
     const useModal = (initialValue = false) => {
@@ -117,6 +184,14 @@ const UserProvider = ({children}) => {
             
         }))
     }
+
+    const alert2 = () => {
+        (Swal.fire({
+            icon: 'warning',
+            title: 'El posteo ya se encuentra en su lista de favoritos',
+            
+        }))
+    }
     
     return (
         <Context.Provider value={{
@@ -132,7 +207,17 @@ const UserProvider = ({children}) => {
             contador, setContador,
             addFavs,
             deleteFavs,
-            alert}}>
+            alert,
+            createUser,
+            username, setUsername,
+            email2, setEmail2, 
+            pasword2, setPasword2,
+            createPost,
+            tittle, setTittle,
+            category, setCategory,
+            post, setPost,
+            userPosts,
+            userPost, setUserPost}}>
             {children}
         </Context.Provider>
     )
