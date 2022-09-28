@@ -6,11 +6,12 @@ import '../ModalPost/Modal.css'
 
 const Modal = ({ children, isOpen, isClose }) => { 
 
-    const{createPost, category, username, tittle, post, setCategory, setTittle, setPost} = useContext(Context)
+    const{createPost, category, username, tittle, post, setCategory, setTittle, setPost, getPosts} = useContext(Context)
 
     const onSubmit = (e) =>{
         e.preventDefault()
         createPost(category, username, tittle, post)
+        
     }
 return (
         

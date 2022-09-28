@@ -13,6 +13,7 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
+import MisPosteos from './componentes/MisPosteos/MisPosteos';
 // import Cookies from 'js-cookie';
 
 
@@ -26,6 +27,7 @@ function App() {
   return (
     <div className='aplicacion'>
         <Routes>
+          <Route path='/posteo' element={<MisPosteos></MisPosteos>}></Route>
           <Route path='/' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>

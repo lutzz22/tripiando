@@ -74,6 +74,7 @@ const UserProvider = ({children}) => {
                     icon: 'success',
                     title: data,
                 }))
+                navigate('/inicio')
             }
 
         }catch (error){
@@ -90,7 +91,7 @@ const UserProvider = ({children}) => {
 
 /////////////////////////////////////// POSTEOS ///////////////////////////////////////////////////////
     const [posts, setPosts] = useState([])
-    const [userPost, setUserPost] = useState([])
+
     
     const getPosts = async() => {
         const response = await axios.get(`${BASE_URL}/posts`)
@@ -120,16 +121,27 @@ const UserProvider = ({children}) => {
                 icon: 'success',
                 title: data,
             }))
-            useEffect(()=>{
-                getPosts()
-            }, [])
         }
+    }
+
+    const [userPost, setUserPost] = useState([])
+
+    const userPosts = async (username) => {
+       username = user.username;
+
+        const response = await axios.get(`${BASE_URL}/posts/:username`)
+        
+        setUserPost(response.data)
+        console.log (response.data)
     }
 
     useEffect(() => {
         getPosts()
     }, [])
     
+    useEffect(() => {
+        userPosts()
+    }, [])
 
  ///////////////////////////////////////// FUNCIONES //////////////////////////////////////////   
 
@@ -204,7 +216,9 @@ const UserProvider = ({children}) => {
             createPost,
             tittle, setTittle,
             category, setCategory,
-            post, setPost}}>
+            post, setPost,
+            userPosts,
+            userPost, setUserPost}}>
             {children}
         </Context.Provider>
     )
