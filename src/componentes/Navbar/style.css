@@ -1,57 +1,55 @@
 #nav {
-    /* position: fixed; */
-    width: 20%;
-    display: flex;
+    width: 25%;
+    margin: 0;
+    position: absolute;
+    display: block;
     flex-direction: column;
     height: 100vh;
     align-items: center;
-    /* background-color: rgba(242, 242, 242, 0.532); */
+    background-color: rgba(242, 242, 242, 0.532);
     border-right: 1px solid rgba(128, 128, 128, 0.526);
 }
 
 h2{
     font-size: 40px;
-    margin-top: 25px;
+    margin-top: 15px;
     color: blue;
 }
 
 #nav ul li i{
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 li{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     display: flex;
     align-content: space-between;
 }
-
 li:hover{
     font-weight: 500;
 }
-
 ul{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items:flex-start;
     height: 40vh;
-    margin: 0 auto;
-    width: 60%;
 }
-
 .perfil{
     margin-top: 100px;
 }
 
 #post {
-    margin: 0 auto;
-    margin-top: 25vh;
-    width: 300px;
-    width: 80%;
+    margin: 30px;
+    margin-top: 20vh;
+    width: 65%;
+    position: absolute;
+    display: block;
     border-radius: 20px;
     font-weight: 600;
     background-color: blue;
+    border: none;
 }
 
 .checkbtn {
@@ -75,6 +73,7 @@ ul{
     }
 
     .checkbtn {
+        position: relative;
         display: block;
         width: 100%;
         background-color: rgba(242, 242, 242, 0.532);
