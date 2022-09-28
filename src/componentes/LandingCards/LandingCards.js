@@ -12,8 +12,8 @@ const Cards = (props) => {
     return (
     
     <div className='container'>
-        <div className='color'>
-        <div className='d-flex flex-wrap justify-content-around' >
+        {/* <div className='color'> */}
+        
 
             <div className="card mb-3" style={{width: "14rem"}} onClick={alert}>
                 <img src = {mendoza} className= " card-img-top" alt="..."/>
@@ -50,9 +50,9 @@ const Cards = (props) => {
                     <p className="card-text">Lugares, buenos, bonitos y baratos para comer en Pinamar</p>
                 </div>
             </div>  */}
-        </div>
+       
     </div>
-    </div>
+    
     )
 }
 

@@ -1,5 +1,9 @@
 .styleLanding{
-    width: 100%;
     height: 100vh;
-    overflow: scroll;
+
+}
+
+.landing{
+    width: 80vw;
+    margin: 0 auto;
 }

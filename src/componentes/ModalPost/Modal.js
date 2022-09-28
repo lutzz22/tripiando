@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../../store/AppContext'
 // import {useEffect, useState } from "react";
 import '../ModalPost/Modal.css'
 
 
 const Modal = ({ children, isOpen, isClose }) => { 
 
+    const{createPost, category, username, tittle, post, setCategory, setTittle, setPost, getPosts} = useContext(Context)
+
+    const onSubmit = (e) =>{
+        e.preventDefault()
+        createPost(category, username, tittle, post)
+        
+    }
 return (
         
         <div className= {`modal ${isOpen && "modal-is-open"}`}>
@@ -15,27 +23,25 @@ return (
 
                     <div className='my-5'>
                         <div className='modal-text'> 
-                            <input className=' modal-input' type="text" placeholder='Elija una categoria'></input> 
+                            <input className=' modal-input' type="text" placeholder='Elija una categoria' value={category} onChange={(e) => setCategory(e.target.value)}></input> 
                         </div>
 
                         <div className='modal-text'>
-                            <input className='py-2 modal-input' type="text"  placeholder='Escriba un título'></input>
+                            <input className='py-2 modal-input' type="text"  placeholder='Escriba un título' value={tittle} onChange={(e) => setTittle(e.target.value)}></input>
                         </div>
 
                         <div className='modal-text'>
-                            <input className=' modal-input-descripcion' type="text" placeholder='Agregue una descripción al post'></input>
+                            <input className=' modal-input-descripcion' type="text" placeholder='Agregue una descripción al post' value={post} onChange={(e) => setPost(e.target.value)}></input>
                         </div>
                         
-                            <button className='modal-postear'> Postear </button>
+                            <button onClick={onSubmit} className='modal-postear'> Postear </button>
                             {children}
-
-
                     </div>
                     
                 </div>
         </div>
-    )
 
+    )
 }
 
 export default Modal

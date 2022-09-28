@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { Context } from '../../store/AppContext';
 import './style.css'
 
-const PosteoFav = (props) => {
-    const {deleteFavs} = useContext(Context)
-    const {id, category, username, tittle, post, posteo} = props;
-    const {contador} = useContext(Context)
+const PosteoFav = ({id, username, tittle, post}) => {
+    const {deleteFavs, postFavs} = useContext(Context)
+    // const {id, username, tittle, post} = props;
+    console.log(postFavs)
 
   return (
     <div>

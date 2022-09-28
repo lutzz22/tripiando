@@ -12,7 +12,8 @@ const Inicio = () => {
   console.log(posts)
 
   return (
-    <div className='d-flex'>
+    <>
+     <div className='d-flex inicio'>
       <Navbar/>
       <div className='d-flex flex-column posteos'>
           {
@@ -23,6 +24,7 @@ const Inicio = () => {
       </div>  
 
     </div>
+    </>
   )
 }
 

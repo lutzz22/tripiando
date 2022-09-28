@@ -9,12 +9,12 @@ const Fav = () => {
   console.log(postFavs)
   return (
     <>
-      <div className='d-flex'>
+      <div className='d-flex fav'>
       <Navbar/>
-      <div className='d-flex flex-column posteos'>
+      <div className='d-flex flex-column posteoos'>
           {
             postFavs.map(posteo => (
-              <PosteoFav key={posteo.id} {...posteo} posteo={posteo}/>
+              <PosteoFav key={posteo.id} {...posteo}/>
             ))
           }
       </div>  

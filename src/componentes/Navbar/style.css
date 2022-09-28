@@ -1,13 +1,11 @@
 #nav {
-    width: 25%;
-    margin: 0;
-    position: absolute;
-    display: block;
+    width: 20%;
+    position: sticky;
+    display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     align-items: center;
-    background-color: rgba(242, 242, 242, 0.532);
-    border-right: 1px solid rgba(128, 128, 128, 0.526);
+    /* background-color: rgba(242, 242, 242, 0.532); */
 }
 
 h2{
@@ -41,11 +39,10 @@ ul{
 }
 
 #post {
-    margin: 30px;
-    margin-top: 20vh;
-    width: 65%;
-    position: absolute;
-    display: block;
+    margin: 0 auto;
+    margin-top: 30vh;
+    width: 300px;
+    width: 80%;
     border-radius: 20px;
     font-weight: 600;
     background-color: blue;
