@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='aplicacion'>
         <Routes>
-          <Route path='/tripiando' element={<Home></Home>} />
+          <Route path='/' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/inicio' element={isLoggedIn ? <Inicio /> : <Home />}/>

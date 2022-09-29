@@ -12,7 +12,7 @@ const Cards = (props) => {
     return (
     
     <div className='container'>
-        {/* <div className='color'> */}
+        
         
 
             <div className="card mb-3" style={{width: "14rem"}} onClick={alert}>
@@ -23,33 +23,7 @@ const Cards = (props) => {
                 </div>
             </div>
 
-            {/* <div className="card mb-3" style={{width: "14rem"}}>
-                <img src={mendoza} className= " card-img-top" alt="..."/>
-                <div className="card-body">
-                    <p className="card-text">Las mejores bodegas de Mendoza</p>
-                </div>
-            </div>
-
-            <div className="card mb-3" style={{width: "14rem"}}>
-                <img src={mendoza} className= " card-img-top" alt="..."/>
-                <div className="card-body">
-                    <p className="card-text">Las mejores bodegas de Mendoza</p>
-                </div>
-            </div>
-
-            <div className="card mb-3" style={{width: "14rem"}}>
-                <img src={mendoza} className= " card-img-top" alt="..."/>
-                <div className="card-body">
-                    <p className="card-text">Las mejores bodegas de Mendoza</p>
-                </div>
-            </div>
-
-            <div className="card mb-3" style={{width: "14rem"}}>
-                <img src={mendoza} className=" card-img-top" alt="..."/>
-                <div className="card-body">
-                    <p className="card-text">Lugares, buenos, bonitos y baratos para comer en Pinamar</p>
-                </div>
-            </div>  */}
+            
        
     </div>
     
