@@ -58,7 +58,7 @@ h3{
 
 .modal-input-descripcion{
     width: 80%;
-    padding-bottom: 18%;
+    padding-bottom: 15%;
     border: none;
     border-radius: 20px;
     background-color: #d4e3ff;;
@@ -125,7 +125,7 @@ h3{
     }
 
     .modal-input-descripcion{
-        padding-bottom: 10%;
+        padding-bottom: 9%;
     }
 
     .button{
@@ -164,7 +164,7 @@ h3{
     }
 
     .modal-input-descripcion{
-        padding-bottom: 10%;
+        padding-bottom: 7%;
     }
 
     button.modal-postear{

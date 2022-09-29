@@ -9,13 +9,13 @@ const Posteo = ( { username, tittle, post, posteo}) => {
 
   return (
     <div>
-        <div className="card" style={{width: "18rem"}}>
+        <div className="card mb-3" style={{width: "100%"}}>
             <div className="card-body">
                 <h5 className="card-title">{tittle}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{category}</h6>
+                {/*<h6 className="card-subtitle mb-2 text-muted">{category}</h6>*/}
                 <p className="card-text">{post}</p>
                 <Link to="/" className="card-link">{username}</Link>
-                <Link to="/" className="card-link">{id}</Link>
+                {/*<Link to="/" className="card-link">{id}</Link>*/}
                 <div className="card post">
                 <div className="card-header tittle">
                 {tittle}

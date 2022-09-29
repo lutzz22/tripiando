@@ -9,7 +9,7 @@ const PosteoFav = ({id, username, tittle, post}) => {
 
   return (
     <div>
-        <div className="card post">
+        <div className="card post mb-3" style={{width: "100%"}}>
           <div className="card-header tittle">
             {tittle}
           </div>

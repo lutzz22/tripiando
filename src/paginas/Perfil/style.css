@@ -33,3 +33,20 @@ button:hover {
     color: white;
     background-color: blue;
 }
+
+@media screen and (max-width: 767px) {
+    .miperfil{
+        width: 100%;
+        padding-top: 90px;
+    }
+
+    #nombre, #cerrar{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width : 768px ) and (max-width : 1023px ) {
+    #nombre, #cerrar{
+        width: 45%;
+    }
+}
