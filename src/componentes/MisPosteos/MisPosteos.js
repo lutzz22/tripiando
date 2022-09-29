@@ -7,7 +7,7 @@ import Navbar from '../Navbar/Navbar'
 const MisPosteos = () => {
   
   const {userPost} = useContext(Context)
-  console.log(userPost)
+
 
   return (
     <>

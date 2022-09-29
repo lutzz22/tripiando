@@ -13,8 +13,7 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
-import MisPosteos from './componentes/MisPosteos/MisPosteos';
-// import Cookies from 'js-cookie';
+
 
 
 
@@ -23,18 +22,17 @@ function App() {
 
   
   const { isLoggedIn } = useContext(Context)
-  // console.log(usuario)
+
   return (
     <div className='aplicacion'>
         <Routes>
-          <Route path='/' element={<Home></Home>} />
+          <Route path='/tripiando' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/inicio' element={isLoggedIn ? <Inicio /> : <Home />}/>
           <Route path='/explorar' element={isLoggedIn ? <Explorar /> : <Home />}/>
           <Route path='/favoritos' element={isLoggedIn ? <Fav /> : <Home />}/>
           <Route path='/perfil' element={isLoggedIn ? <Perfil /> : <Home />}/>
-          <Route path='/posteo' element={isLoggedIn ? <MisPosteos /> : <Home />}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer></Footer>

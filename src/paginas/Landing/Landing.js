@@ -7,7 +7,7 @@ import LandingCards from '../../componentes/LandingCards/LandingCards.js'
 const Landing = () => {
 
   const {posts} = useContext(Context)
-  console.log(posts)
+
 
   return (
     <div style={{backgroundColor: "#ABC9FF"}}>

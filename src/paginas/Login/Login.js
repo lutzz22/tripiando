@@ -10,7 +10,7 @@ const Login = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     userLogin(email, pasword)
-    // console.log(email, pasword)
+
   }
 
   const register = (e) => {

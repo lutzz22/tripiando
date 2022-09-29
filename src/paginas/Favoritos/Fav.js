@@ -3,13 +3,14 @@ import '../Favoritos/style.css'
 import Navbar from '../../componentes/Navbar/Navbar'
 import { Context } from '../../store/AppContext'
 import PosteoFav from '../../componentes/PosteoFav'
+import AdsSection from '../../componentes/Anuncios/AdsSection'
 
 const Fav = () => {
   const {postFavs} = useContext(Context)
-  console.log(postFavs)
+
   return (
     <>
-      <div className='d-flex fav'>
+      <div className='d-flex fav justify-content-between'>
       <Navbar/>
       <div className='d-flex flex-column posteoos'>
           {
@@ -18,7 +19,7 @@ const Fav = () => {
             ))
           }
       </div>  
-
+      <AdsSection/>
       </div>
 
     </>

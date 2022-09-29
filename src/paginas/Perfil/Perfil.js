@@ -2,13 +2,14 @@ import {React, useContext} from 'react'
 import '../Perfil/style.css'
 import Navbar from '../../componentes/Navbar/Navbar'
 import { Context } from '../../store/AppContext'
+import AdsSection from '../../componentes/Anuncios/AdsSection'
 
 const Perfil = () => {
 const {user} = useContext(Context)
 
   return (
     <>
-      <div className='d-flex'>
+      <div className='d-flex justify-content-between'>
       <Navbar/>
       <div className='d-flex flex-column miperfil'>
          <h5>{user.nombre}</h5>
@@ -18,7 +19,7 @@ const {user} = useContext(Context)
           <button id='cerrar'>cerrar sesion</button>
          </div>
       </div>  
-
+    <AdsSection/>
     </div>
     </>
   )

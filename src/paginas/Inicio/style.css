@@ -1,11 +1,13 @@
 .posteos {
     width: 55%;
-    border-left: 1px solid rgba(128, 128, 128, 0.526); 
-    border-right: 1px solid rgba(128, 128, 128, 0.526);;
     padding: 10px;
     height: 100%;
-    
-    /* align-items: center; */
+    margin: 20px;
+
+}
+
+.inicio{
+    background-color: #1e409f4b ;
 }
 
 @media screen and (max-width: 767px) {
