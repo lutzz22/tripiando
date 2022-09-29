@@ -27,7 +27,6 @@ function App() {
   return (
     <div className='aplicacion'>
         <Routes>
-          <Route path='/posteo' element={<MisPosteos></MisPosteos>}></Route>
           <Route path='/' element={<Home></Home>} />
           <Route path='/landing' element={<Landing />}/>
           <Route path='/login' element={<Login />}/>
@@ -35,6 +34,7 @@ function App() {
           <Route path='/explorar' element={isLoggedIn ? <Explorar /> : <Home />}/>
           <Route path='/favoritos' element={isLoggedIn ? <Fav /> : <Home />}/>
           <Route path='/perfil' element={isLoggedIn ? <Perfil /> : <Home />}/>
+          <Route path='/posteo' element={isLoggedIn ? <MisPosteos /> : <Home />}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer></Footer>
