@@ -1,6 +1,5 @@
 {
   "name": "tripiando",
-  "homepage": "http://lutzz22.github.io/tripiando",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
