@@ -127,12 +127,12 @@ const UserProvider = ({children}) => {
     const [userPost, setUserPost] = useState([])
 
     const userPosts = async (username) => {
-       username = user.username;
+        username = user.username;
 
-        const response = await axios.get(`${BASE_URL}/posts/:username`)
+        const response = await axios.get(`${BASE_URL}/posts/username`)
         
-        setUserPost(response.data)
-        console.log (response.data)
+        // setUserPost(response.data)
+        console.log (username)
     }
 
     useEffect(() => {
