@@ -40,8 +40,8 @@ const UserProvider = ({children}) => {
                 navigate('/inicio')
                 
             } else{
-                setEmail('')
-                setPasword('')
+                setEmail('');
+                setPasword('');
                 (Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -174,7 +174,6 @@ const UserProvider = ({children}) => {
         const openModal= () => setIsOpen(true);
         const closeModal= () => setIsOpen(false);
         
-    
         return [isOpen, openModal, closeModal]
     }   
 

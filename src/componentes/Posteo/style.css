@@ -24,3 +24,16 @@
     align-items:right;
     padding-right: 5px;
 }
+
+@media screen and (max-width: 767px) {
+    
+    .card {
+        flex-direction: column;
+        position: static;
+        width: max-content;
+    }
+
+    div.card.post{  
+        width: 100%;
+    }
+}

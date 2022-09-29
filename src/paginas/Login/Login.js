@@ -21,7 +21,6 @@ const Login = () => {
 
   return (
     <>
-
     <Navbar3/>
       <div id='formularios' className='row'>
         <h2>Inicia Sesion o Registrate aca</h2>

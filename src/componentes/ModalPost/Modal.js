@@ -36,14 +36,12 @@ return (
                         
                             <button onClick={onSubmit} className='modal-postear'> Postear </button>
                             {children}
-
-
                     </div>
                     
                 </div>
         </div>
-    )
 
+    )
 }
 
 export default Modal
