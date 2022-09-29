@@ -1,0 +1,36 @@
+.anuncio{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+img{
+    width: 130%;
+}
+
+.tittulo{
+    background-color: #1e409f4b ;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.noticia {
+    width: 100%;
+    font-size: 12px;
+}
+
+h3{
+    width: 75%;
+    margin: 0 auto;
+}
+
+a{
+    display: flex;
+    justify-content: end;
+    font-size: 10px;
+    color: black;
+    margin-right: 10px;
+    text-decoration: none;
+}
+

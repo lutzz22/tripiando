@@ -1,8 +1,9 @@
 .posteoos {
     width: 55%;
     padding: 10px;
-    border-left: 1px solid rgba(128, 128, 128, 0.526); 
-    border-right: 1px solid rgba(128, 128, 128, 0.526);;
+    height: 100%;
+    margin: 20px;
+
     /* overflow: scroll; */
 }
 

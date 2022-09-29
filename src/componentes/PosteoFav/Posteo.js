@@ -4,8 +4,8 @@ import './style.css'
 
 const PosteoFav = ({id, username, tittle, post}) => {
     const {deleteFavs, postFavs} = useContext(Context)
-    // const {id, username, tittle, post} = props;
-    console.log(postFavs)
+
+
 
   return (
     <div>

@@ -18,7 +18,6 @@ const UserProvider = ({children}) => {
     const [pasword, setPasword] = useState('')
     const navigate = useNavigate()
 
-    console.log(user)
 
 ////////////////////////////////////////// USUARIOS ////////////////////////////////////////////
 
@@ -99,7 +98,7 @@ const UserProvider = ({children}) => {
         const posteos = await response.data
 
         setPosts(posteos)
-        console.log(posteos)
+
     }
 
     const [category, setCategory] = useState('')
@@ -125,14 +124,24 @@ const UserProvider = ({children}) => {
     }
 
     const [userPost, setUserPost] = useState([])
+    
 
-    const userPosts = async (username) => {
-        username = user.username;
 
-        const response = await axios.get(`${BASE_URL}/posts/username`)
+    const userPosts = async () => {
+        const usuario = user.username;
+
+        const response = await axios.get(`${BASE_URL}/posts`)
+
+        const posteos = await response.data
         
-        // setUserPost(response.data)
-        console.log (username)
+        if(usuario === posteos.username){
+            setUserPost(posteos)
+            console.log(posteos)
+            console.log(username)
+        } else{
+            // console.log('no hay posteos')
+        }
+        
     }
 
     useEffect(() => {
@@ -147,6 +156,22 @@ const UserProvider = ({children}) => {
 
     const [contador, setContador] = useState(0)
     const [postFavs, setPostFavs] = useState([])
+    const API_KEY = 'f27d1198d04a40a3b8f76f7f522182d4'
+
+    const [news, setNews] = useState([])
+
+    const noticias = async() => {
+
+        const response = await axios.get (`https://newsapi.org/v2/top-headlines?sources=google-news-ar&apiKey=${API_KEY}`)
+
+        const data = response.data.articles
+        setNews(data)
+        
+    }
+
+    useEffect(()=>{
+        noticias()
+    }, [])
 
     const addFavs = (posteo) => {
         const postFavorito = postFavs.find(f => f.id === posteo.id)
@@ -217,7 +242,8 @@ const UserProvider = ({children}) => {
             category, setCategory,
             post, setPost,
             userPosts,
-            userPost, setUserPost}}>
+            userPost, setUserPost,
+            noticias, news, setNews}}>
             {children}
         </Context.Provider>
     )

@@ -13,7 +13,8 @@ import Login from './paginas/Login';
 import Footer from './componentes/Footer/Footer';
 import { useContext } from 'react';
 import { Context } from './store/AppContext';
-import MisPosteos from './componentes/MisPosteos/MisPosteos';
+// import MisPosteos from './componentes/MisPosteos/MisPosteos';
+import AdsSection from './componentes/Anuncios/AdsSection';
 // import Cookies from 'js-cookie';
 
 
@@ -23,7 +24,7 @@ function App() {
 
   
   const { isLoggedIn } = useContext(Context)
-  // console.log(usuario)
+
   return (
     <div className='aplicacion'>
         <Routes>
@@ -34,7 +35,7 @@ function App() {
           <Route path='/explorar' element={isLoggedIn ? <Explorar /> : <Home />}/>
           <Route path='/favoritos' element={isLoggedIn ? <Fav /> : <Home />}/>
           <Route path='/perfil' element={isLoggedIn ? <Perfil /> : <Home />}/>
-          <Route path='/posteo' element={isLoggedIn ? <MisPosteos /> : <Home />}/>
+          <Route path='/posteo' element={isLoggedIn ? <AdsSection /> : <Home />}/>
           <Route path='/*' element={<Error />}/>
         </Routes>
         <Footer></Footer>

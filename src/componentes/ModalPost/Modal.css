@@ -11,6 +11,12 @@
     align-items: center;
 }
 
+input{
+    padding: 10px;
+    color: #1e409f;
+    border-color: #1e409f;
+}
+
 h3{ 
     text-align: center;
     color: #1e409f;
