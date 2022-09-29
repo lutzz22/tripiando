@@ -67,10 +67,6 @@ ul{
     display: none;
 }
 
-.lista{
-    margin-bottom: -30px;
-}
-
 @media screen and (max-width: 767px) {
     #nav {
         width: 70%;
@@ -129,6 +125,10 @@ ul{
     }
 }
 
+.lista {
+    margin-bottom: 30px;
+}
+
 @media screen and (min-width : 768px ) and (max-width : 1023px ) {
     #nav{
         width: 30%;
@@ -136,5 +136,11 @@ ul{
 
     .lista{
         margin-bottom: -40px;
+    }
+}
+
+@media screen and (min-width : 1024px ){
+    .lista{
+        margin-bottom: -30px;
     }
 }
